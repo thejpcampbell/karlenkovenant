@@ -1,0 +1,14 @@
+{
+  "name": "The Marriage Walk · Karlen Kovenant",
+  "short_name": "Marriage Walk",
+  "description": "A guided Bible study for Keith & Leanne Karlen.",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070B14",
+  "theme_color": "#070B14",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

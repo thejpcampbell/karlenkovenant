@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — Campbell Covenant Platform Spec v1 §5.1 */
+:root {
+  --bg-base: #070910;
+  --bg-card: rgba(255, 255, 255, 0.015);
+  --border: rgba(201, 168, 76, 0.18);
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-pale: #f5e6b8;
+  --cream: #ece0c2;
+  --cream-dim: #c8b88a;
+  --muted: #8a7e64;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-base);
+  color: var(--cream-dim);
+  font-family: 'Lora', Georgia, serif;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Cinzel display + small-caps label */
+.cinzel {
+  font-family: 'Cinzel', serif;
+}
+.kicker {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.62rem;
+}
+
+/* The amen close — always gold italic (Rule 11) */
+.amen {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+/* Footer creed pill / text */
+.creed {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.14);
+  border-radius: 9999px;
+}
+
+/* Hold-to-reset gold sweep */
+@keyframes holdSweep {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Ambient gold motes — slow rise with a gentle sway */
+@keyframes motedrift {
+  from { transform: translate(0, 0); opacity: 0; }
+  12% { opacity: var(--mote-opacity, 0.2); }
+  50% { transform: translate(var(--mote-sway, 0px), -55vh); }
+  88% { opacity: var(--mote-opacity, 0.2); }
+  to { transform: translate(0, -110vh); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
