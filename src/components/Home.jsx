@@ -82,7 +82,7 @@ export default function Home({ overallDone, weekDoneCount, remote, onOpenWeek, o
   };
 
   return (
-    <div style={{ position: 'relative', maxWidth: 600, margin: '0 auto', padding: '18px 12px 92px' }}>
+    <div style={{ position: 'relative', maxWidth: 600, margin: '0 auto', padding: 'calc(18px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right)) calc(92px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left))' }}>
       <header style={{ textAlign: 'center', marginBottom: 24 }}>
         <div className="kicker" style={{ color: 'var(--gold)' }}>The Marriage Walk</div>
         <h1 className="cinzel" style={{ fontSize: '2rem', fontWeight: 500, color: 'var(--gold-pale)', letterSpacing: '1.5px', margin: '10px 0 4px', textShadow: '0 0 24px rgba(201,168,76,.18)' }}>

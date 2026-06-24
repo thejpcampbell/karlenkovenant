@@ -161,7 +161,7 @@ export default function SessionPlayer({ sessionId, onBack, isStageDone, setStage
         style={{ position: 'fixed', inset: 0, background: `radial-gradient(125% 80% at 50% 0%, ${color}3b, ${color}0d 44%, transparent 72%)`, pointerEvents: 'none', zIndex: 0 }}
       />
 
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 640, margin: '0 auto', padding: '12px 13px 92px' }}>
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: 640, margin: '0 auto', padding: 'calc(12px + env(safe-area-inset-top)) calc(13px + env(safe-area-inset-right)) calc(92px + env(safe-area-inset-bottom)) calc(13px + env(safe-area-inset-left))' }}>
         {/* Header */}
         <header style={{ marginBottom: '1rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: 12 }}>

@@ -19,7 +19,7 @@ export default function WeekScreen({ weekN, onBack, onOpenSession, sessionStageC
         style={{ position: 'fixed', inset: 0, background: `radial-gradient(125% 72% at 50% 0%, ${week.color}33, ${week.color}0a 46%, transparent 72%)`, pointerEvents: 'none', zIndex: 0 }}
       />
 
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 620, margin: '0 auto', padding: '12px 12px 96px' }}>
+      <div style={{ position: 'relative', zIndex: 1, maxWidth: 620, margin: '0 auto', padding: 'calc(12px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right)) calc(96px + env(safe-area-inset-bottom)) calc(12px + env(safe-area-inset-left))' }}>
         <header style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '1.3rem' }}>
           <button onClick={onBack} aria-label="Back to all weeks" style={{ fontSize: '1.6rem', color: 'var(--cream-dim)', minHeight: 44, minWidth: 44 }}>
             ‹

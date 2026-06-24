@@ -69,7 +69,8 @@ export default function RoleSelect({ onPick }) {
       <div
         style={{
           position: 'relative', zIndex: 1, minHeight: '100dvh', display: 'flex', flexDirection: 'column',
-          justifyContent: 'center', maxWidth: 620, margin: '0 auto', padding: '2rem 14px',
+          justifyContent: 'center', maxWidth: 620, margin: '0 auto',
+          padding: 'calc(2rem + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) calc(2rem + env(safe-area-inset-bottom)) calc(14px + env(safe-area-inset-left))',
         }}
       >
         {/* Brand */}
