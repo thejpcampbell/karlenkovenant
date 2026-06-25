@@ -9,7 +9,7 @@ import { RoleProvider } from './RoleContext.jsx';
 import { ROLES } from './data/roles.js';
 import { useProgress } from './hooks/useProgress.js';
 
-const ROLE_KEY = 'cc_role';
+const ROLE_KEY = 'kc_role';
 
 // view: 'home' | 'week' | 'session'
 export default function App() {
